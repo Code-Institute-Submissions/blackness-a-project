@@ -7,15 +7,19 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = 'Blackness'
-app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
+app.config["MONGO_URI"] = os.getenv('MONGO_URI')
 
 mongo = PyMongo(app)
 
 
 @app.route('/')
-@app.route('/get_local_heros')
-def get_hero():
+@app.route('/get_heros')
+def get_heros():
     return render_template("hero.html", hero=mongo.db.local_heros.find())
+    
+
+
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

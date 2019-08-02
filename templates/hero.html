@@ -7,17 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>HELLO.. U can see me</h2>
-    {% for local_hero in local_heros %}
-        {{local_heros.first}}
-        {{local_heros.last}}
-        {{local_heros.nationality}}
-        {{local_heros.region}}
-        {{local_heros.profession}}
-        {{local_heros.recognition}}
-        {{local_heros.details}}
-    
+    <h2>Local Heros</h2>
+    {% for test in hero %}
+    {{ test.first }}
+    {{ test.last }}
+    {{ test.gender }}
+    {{ test.nationality }}
+    {{ test.region }}
+    {{ test.Profession }}
+    {{ test.recognition }}
+    {{ test.details }}
     {% endfor %}
+    <h3> Vote for you favourite local hero</h3>
+    
     
     
     
