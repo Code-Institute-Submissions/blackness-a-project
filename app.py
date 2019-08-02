@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -7,13 +7,17 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = 'Blackness'
-app.config["MONGO_URI"] = os.getenv('MONGO_URI',)
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
+
+mongo = PyMongo(app)
+
 
 @app.route('/')
-def hello():
-    return 'Hello world'
-    
-if __name__== '__main__':
+@app.route('/get_local_heros')
+def get_hero():
+    return render_template("hero.html", hero=mongo.db.local_heros.find())
+
+if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
-        port=int(os.environ.get('PORT')),
-        debug=True)
+            port=int(os.environ.get('PORT')),
+            debug=True)
