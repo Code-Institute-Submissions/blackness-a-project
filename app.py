@@ -23,6 +23,12 @@ def add_hero():
     return render_template('add_hero.html')
     
 
+@app.route('/insert_hero', methods=['POST'])
+def insert_hero():
+    hero = mongo.db.local_heros
+    hero.insert_one(request.form.to_dict())
+    return redirect(url_for('get_heros'))
+
 
 
 
