@@ -20,7 +20,7 @@ def get_heros():
     
 @app.route('/add_hero')
 def add_hero():
-    return render_template('add_hero.html')
+    return render_template('add_hero.html', heros=mongo.db.local_heros.find())
     
 
 @app.route('/insert_hero', methods=['POST'])

@@ -5,29 +5,25 @@
         <h6>Know of someone who should be in our database? Add them here!</h6>
 
         <div class="row">
-
-            <form action="" method="POST" class="col s12">
+<!--- ------------------------------START OF FORM---------------------- ---> 
+            <form action="{{ url_for('insert_hero') }}" method="POST" class="col s12">
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">account_circle</i>
-                        <input id="icon_prefix" name="local_heros_first" class="last" type="text" class="validate">
+                        <input id="icon_prefix" name="first" class="last" type="text" class="validate">
                         <label for="icon_prefix">First Name</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">account_circle</i>
-                        <input id="icon_prefix" name="local_heros_last" class="last" type="text" class="validate">
+                        <input id="icon_prefix" name="last" class="last" type="text" class="validate">
                         <label for="icon_prefix">Last Name</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">face</i>
-                        <!--<input id="icon_prefix" name="local_heros_last" class="last" type="text" class="validate">-->
+                        <!--<input id="icon_prefix" name="gender" class="last" type="text" class="validate">-->
                         <label for="icon_prefix">Gender</label>
                     </div>
-                    
-                    
-                    
-                    
-                    
+<!--- ------------------------------RADIO BUTTONS---------------------- --->                  
                     <div class="input-field col s12">
                     <p>
                         <label class="gender" >
@@ -54,28 +50,35 @@
                         </label>
                     </div>
                     </p>
+<!--- ------------------------------ END OF RADIO BUTTONS---------------------- ---> 
                     <div class="input-field col s12">
                         <i class="material-icons prefix">flag</i>
-                        <input id="icon_prefix" name="local_heros_last" class="last" type="text" class="validate">
+                        <input id="icon_prefix" name="nationality" type="text" class="validate">
                         <label for="icon_prefix">Nationality</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">terrain</i>
-                        <input id="icon_prefix" name="local_heros_first" class="last" type="text" class="validate">
+                        <input id="icon_prefix" name="region" type="text" class="validate">
                         <label for="icon_prefix">Region</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">work</i>
-                        <input id="icon_prefix" name="local_heros_first" class="last" type="text" class="validate">
+                        <input id="icon_prefix" name="profession"  type="text" class="validate">
                         <label for="icon_prefix">Profession</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">edit</i>
-                        <textarea id="textarea1" class="materialize-textarea"></textarea>
-                        <label for="textarea1">Textarea</label>
+                        <textarea id="textarea1" class="materialize-textarea" name="details"></textarea>
+                        <label for="textarea1">Details</label>
+                    </div>
+                    <div class="row">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                    </button>
                     </div>
                 </div>
             </form>
+<!--- ------------------------------END OF FORM---------------------- ---> 
         </div>
     </div>
 </div>
