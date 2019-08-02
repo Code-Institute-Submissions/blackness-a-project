@@ -17,6 +17,11 @@ mongo = PyMongo(app)
 def get_heros():
     return render_template("hero.html", hero=mongo.db.local_heros.find())
     
+    
+@app.route('/add_hero')
+def add_hero():
+    return render_template('add_hero.html')
+    
 
 
 
