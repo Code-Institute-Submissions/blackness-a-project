@@ -14,3 +14,13 @@ body{
 .gender{
     margin-left:40px;
 }
+
+.inputted_hero{
+    width: 50%;
+    height:500px;
+    border:1px solid white;
+    display: block;
+    margin: 0;
+    padding-left:20px;
+    
+}
