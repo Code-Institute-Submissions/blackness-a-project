@@ -15,7 +15,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_heros')
 def get_heros():
-    return render_template("hero.html", hero=mongo.db.local_heros.find())
+    return render_template("hero.html", heros=mongo.db.local_heros.find())
     
     
 @app.route('/add_hero')
