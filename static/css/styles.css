@@ -24,3 +24,30 @@ body{
     padding-left:20px;
     
 }
+
+.card{
+    width:50%;
+    height:300px;
+    display: inline-block;
+    margin: 0;
+    
+}
+
+.card-content{
+    color:black;
+    text-align: right;
+    flex-direction: none;
+    
+}
+
+.card .card-content{
+    padding-right: 10px;
+}
+
+.special{ /*/not working*/
+    color: green;
+}
+
+#Citizen{
+    color:black;
+}

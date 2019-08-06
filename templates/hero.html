@@ -1,54 +1,36 @@
 {% extends 'base.html' %} {% block content %}
-<h2>Citizen awards</h2>
-
-<!--{% for test in heros %} {{ test.first }} {{ test.last }} {{ test.gender }} {{ test.nationality }} {{ test.region }} {{ test.Profession }} {{ test.recognition }} {{ test.details }} {% endfor %}-->
-<!--<h3> Vote for you favourite local hero</h3>-->
-
-
-
-<!--- TEST AREA --- ABOVE CODE IS WORKING -- BOTTOM NOT --->
-<!--<div class="container">-->
-<!--<div class="row">-->
-<!--<div class="col s12 m7">-->
-<!--    {% for test in heros %}-->
-
-<!--    <h2 class="header"></h2>-->
-<!--    <div class="card horizontal">-->
-<!--        <div class="card-image">-->
-<!--            <img src="https://lorempixel.com/100/190/nature/6">-->
-<!--        </div>-->
-<!--        <div class="card-stacked">-->
-<!--            <div class="card-content">-->
-<!--                <p>{{ test.first }} {{ test.last }} {{ test.gender }} <br/>{{ test.nationality }} {{ test.region }} <br/>{{ test.Profession }} {{ test.recognition }} <br/>{{ test.details }}</p>-->
-<!--            </div>-->
-<!--            <div class="card-action">-->
-<!--                <a href="#">Vote up</a>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--{% endfor %}    -->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-
 <div class="container">
+    <h2 id="Citizen">Citizen awards</h2>
+    <p>Read through the profiles of the people who are making a change in your area, vote for the most inspirational or </p><span class="special">put forward a nomenee</span>
+    {% for test in heros %}
     <div class="row">
-        {% for test in heros %}
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{ test.first }} {{ test.last }}</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+
+        <div class="col s12 m7">
+
+
+            <h2 class="header"></h2>
+            <div class="card horizontal text_H">
+                <div class="card-image">
+                    <img src="https://lorempixel.com/100/190/nature/6">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>{{ test.first }} {{ test.last }} {{ test.gender }} <br/>{{ test.nationality }} {{ test.region }}
+                            <h4>{{ test.Profession }}</h4> {{ test.recognition }} <br/>{{ test.details }}</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Vote up</a>
+                    </div>
+
+                </div>
+
             </div>
+
         </div>
-        {% endfor %}
-    </div>
+    </div>{% endfor %}
 </div>
 
 
 
 
-
-
-{% endblock %}
+    {% endblock %}
