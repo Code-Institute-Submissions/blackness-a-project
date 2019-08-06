@@ -11,9 +11,9 @@ body{
     
 }
 
-.gender{
-    margin-left:40px;
-}
+/*.gender{*/
+/*    margin-left:40px;*/
+/*}*/
 
 .inputted_hero{
     width: 50%;
@@ -25,13 +25,13 @@ body{
     
 }
 
-.card{
-    width:50%;
-    height:300px;
-    display: inline-block;
-    margin: 0;
+/*.card{*/
+/*    width:50%;*/
+/*    height:300px;*/
+/*    display: inline-block;*/
+/*    margin: 0;*/
     
-}
+/*}*/
 
 .card-content{
     color:black;
@@ -40,14 +40,15 @@ body{
     
 }
 
-.card .card-content{
-    padding-right: 10px;
-}
+/*.card .card-content{*/
+/*    padding-right: 10px;*/
+/*}*/
 
 .special{ /*/not working*/
-    color: green;
-}
+/*    color: green;*/
+/*}*/
 
 #Citizen{
-    color:black;
+    color: black;
+    
 }
