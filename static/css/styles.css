@@ -52,3 +52,11 @@ body{
     color: black;
     
 }
+
+nav{ 
+    background-color: black;
+}
+
+.nameStrong { /* no va*/
+    font-weight: bold;
+}
