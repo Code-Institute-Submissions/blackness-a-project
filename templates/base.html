@@ -14,14 +14,16 @@
                 <a href="{{url_for('get_heros')}}" class="brand-logo center black-text"> - BLACKNESS - </a> 
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{url_for('get_heros')}}">Home</a></li>
-                    <li><a href="{{url_for('add_hero')}}">New Task</a></li>
-                    <li><a href="{{url_for('insert_hero')}}">Manage Categories</a></li>
+                    <li><a href="{{url_for('get_heros')}}">Local Heros</a></li>
+                    <li><a href="{{url_for('add_hero')}}">Submit Hero</a></li>
+                    <!--<li><a href="{{url_for('insert_hero')}}">Manage Categories</a></li>-->
+                    <li><a href="{{url_for('get_famous')}}">Search</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="{{url_for('get_heros')}}">Home</a></li>
-                    <li><a href="{{url_for('add_hero')}}">New Task</a></li>
-                    <li><a href="{{url_for('insert_hero')}}">Manage Categories</a></li>
+                    <li><a href="{{url_for('get_heros')}}">Local Hero</a></li>
+                    <li><a href="{{url_for('add_hero')}}">Submit Hero</a></li>
+                    <!--<li><a href="{{url_for('insert_hero')}}">Manage Categories</a></li>-->
+                    <li><a href="{{url_for('get_famous')}}">Search</a></li>
                 </ul>
             </div>         
      </nav>     

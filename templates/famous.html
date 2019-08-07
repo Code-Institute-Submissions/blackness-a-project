@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Images</h3>
+<div class="container">
+
+  <div class="row">
+      {% for test in famous %}
+    <div class="col S12 m4 format">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ test.images }}">
+          
+          <span class="card-title">{{ test.first }} {{ test.last }}</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">thumb_up</i></a>
+        </div>
+        <div class="card-content">
+            <p>{{ test.nationality }} - {{ test.profession }}</p>
+          <p>{{ test.details }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
+         
+
+{% endblock %}

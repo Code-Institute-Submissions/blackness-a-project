@@ -11,9 +11,9 @@ body{
     
 }
 
-/*.gender{*/
-/*    margin-left:40px;*/
-/*}*/
+.gender{
+    margin-left:40px;
+}
 
 .inputted_hero{
     width: 50%;
@@ -40,23 +40,9 @@ body{
     
 }
 
-/*.card .card-content{*/
-/*    padding-right: 10px;*/
+/*.format{*/
+/*    display: inline-block;*/
+/*    margin: 0;*/
+/*    width: 100px;*/
+/*    height: 200px;*/
 /*}*/
-
-.special{ /*/not working*/
-/*    color: green;*/
-/*}*/
-
-#Citizen{
-    color: black;
-    
-}
-
-nav{ 
-    background-color: black;
-}
-
-.nameStrong { /* no va*/
-    font-weight: bold;
-}
