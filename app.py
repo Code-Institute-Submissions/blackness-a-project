@@ -18,6 +18,17 @@ mongo = PyMongo(app)
 def get_heros():
     return render_template("hero.html", heros=mongo.db.local_heros.find())
     
+
+@app.route('/get_famous')
+def get_famous():
+    return render_template("famous.html", famous=mongo.db.Persons_of_Interest.find())
+
+
+@app.route('/get_index')
+def get_index():
+    return render_template("index.html", heros=mongo.db.local_heros.find())
+
+    
     
 @app.route('/add_hero')
 def add_hero():
