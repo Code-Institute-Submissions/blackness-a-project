@@ -2,6 +2,7 @@ import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+import datetime
 
 
 app = Flask(__name__)
@@ -20,7 +21,7 @@ def get_heros():
     
 @app.route('/add_hero')
 def add_hero():
-    return render_template('add_hero.html', heros=mongo.db.local_heros.find())
+    return render_template('add_hero.html', heros=mongo.db.local_heros.find(), date=datetime.datetime.today())
     
 
 @app.route('/insert_hero', methods=['POST'])
