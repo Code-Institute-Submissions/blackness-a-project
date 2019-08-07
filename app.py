@@ -22,11 +22,16 @@ def get_heros():
 @app.route('/get_famous')
 def get_famous():
     return render_template("famous.html", famous=mongo.db.Persons_of_Interest.find())
+    
+
+@app.route('/get_art')
+def get_art():
+    return render_template("gallery.html", famous=mongo.db.Persons_of_Interest.find())
 
 
 @app.route('/get_index')
 def get_index():
-    return render_template("index.html", heros=mongo.db.local_heros.find())
+    return render_template("index.html", famous=mongo.db.local_heros.find())
 
     
     
