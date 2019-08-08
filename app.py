@@ -18,18 +18,6 @@ mongo = PyMongo(app)
 def get_heros():
     return render_template("hero.html", heros=mongo.db.local_heros.find())
     
-
-@app.route('/get_famous')
-def get_famous():
-    return render_template("famous.html", famous=mongo.db.Persons_of_Interest.find())
-    
-
-
-@app.route('/get_index')
-def get_index():
-    return render_template("index.html", famous=mongo.db.local_heros.find())
-
-    
     
 @app.route('/add_hero')
 def add_hero():
@@ -43,38 +31,58 @@ def insert_hero():
     return redirect(url_for('get_heros'))
 
 
+@app.route('/edit_hero/<heros_id>')
+def edit_hero(heros_id):
+    the_hero =  mongo.db.local_heros.find_one({"_id": ObjectId(heros_id)})
+    # all_heros =  mongo.db.local_heros.find()
+    return render_template('hero.html', hero=the_hero)
+    
+    
+@app.route('/update_hero/<hero_id>', methods=["POST"])
+def update_hero(heros_id):
+    hero = mongo.db.local_heros
+    hero.update( {'_id': ObjectId(heros_id)},
+    {
+        'first':request.form.get('first'),
+        'last':request.form.get('last'),
+        'nationality': request.form.get('nationality'),
+        'region': request.form.get('region'),
+        'profession':request.form.get('profession'),
+        'details': request.form.get('details'),
+        'image': request.form.get('image')
+    })
+    return redirect(url_for('get_heros'))
+    
+    
 
+@app.route('/delete_hero/<heros_id>')
+def delete_hero(heros_id):
+    mongo.db.local_heros.remove({'_id': ObjectId(heros_id)})
+    return redirect(url_for('get_heros'))
+    
+    
+
+#database for famous people
+@app.route('/get_famous')
+def get_famous():
+    return render_template("famous.html", famous=mongo.db.Persons_of_Interest.find())
+    
+
+
+#not finished - route for search/filter
+@app.route('/get_index')
+def get_index():
+    return render_template("index.html", famous=mongo.db.local_heros.find())
+    
+
+#route for artists gallery
 @app.route('/get_art')
 def get_art():
     return render_template("gallery.html", famous=mongo.db.Persons_of_Interest.find())
-    
 
-@app.route('/edit_task/<task_id>')
-def edit_task(task_id):
-    the_task =  mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
-    all_categories =  mongo.db.categories.find()
-    return render_template('edittask.html', task=the_task,
-                           categories=all_categories)
-
-
-@app.route('/update_task/<task_id>', methods=["POST"])
-def update_task(task_id):
-    tasks = mongo.db.tasks
-    tasks.update( {'_id': ObjectId(task_id)},
-    {
-        'task_name':request.form.get('task_name'),
-        'category_name':request.form.get('category_name'),
-        'task_description': request.form.get('task_description'),
-        'due_date': request.form.get('due_date'),
-        'is_urgent':request.form.get('is_urgent')
-    })
-    return redirect(url_for('get_tasks'))
     
     
-@app.route('/delete_task/<task_id>')
-def delete_task(task_id):
-    mongo.db.tasks.remove({'_id': ObjectId(task_id)})
-    return redirect(url_for('get_tasks'))
+
     
 
 
