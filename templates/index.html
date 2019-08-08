@@ -1,15 +1,15 @@
 {% extends 'base.html' %} {% block content %}
-<h3>Add Task</h3>
+<h3>search database</h3>
 <div class="row">
-    <form action="{{ url_for('insert_task') }}" method="POST"  class="col s12">
+    <form action="{{ url_for('insert_hero') }}" method="POST"  class="col s12">
         
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">poll</i>
-                    <select id="category" name="category_name">
-                  <option value="" disabled selected>Country:</option>
-                  {% for cat in categories %}
-                      <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                    <select id="nationality" name="nationality">
+                  <option value="" disabled selected>Nationality:</option>
+                  {% for nat in nationality %}
+                      <option value="{{nat.nationality}}">{{nat.nationality}}</option>
                   {% endfor %}
                 </select>
                     <label>Search by:</label>
@@ -20,8 +20,8 @@
                     <i class="material-icons prefix">poll</i>
                     <select id="category" name="category_name">
                   <option value="" disabled selected>Profession</option>
-                  {% for cat in categories %}
-                      <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                  {% for prof in profession %}
+                      <option value="{{prof.profession}}">{{prof.profession}}</option>
                   {% endfor %}
                 </select>
                     <label>Search by:</label>

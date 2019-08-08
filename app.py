@@ -35,7 +35,7 @@ def insert_hero():
 def edit_hero(heros_id):
     the_hero =  mongo.db.local_heros.find_one({"_id": ObjectId(heros_id)})
     # all_heros =  mongo.db.local_heros.find()
-    return render_template('hero.html', hero=the_hero)
+    return render_template('edit_hero.html', hero=the_hero)
     
     
 @app.route('/update_hero/<hero_id>', methods=["POST"])
@@ -72,7 +72,9 @@ def get_famous():
 #not finished - route for search/filter
 @app.route('/get_index')
 def get_index():
-    return render_template("index.html", famous=mongo.db.local_heros.find())
+    nationality = mongo.db.Nationality.find()
+    profession = mongo.db.Profession.find()
+    return render_template("index.html", nationality=nationality, profession=profession)
     
 
 #route for artists gallery

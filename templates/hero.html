@@ -17,8 +17,8 @@
                             <h4>{{ test.Profession }}</h4> {{ test.recognition }} <br/>{{ test.details }}</p>
                     </div>
                     <div class="card-action">
-                        <a href="#">Delete</a>
-                        <a href="#">Edit</a>
+                        <a href="">Delete</a>
+                        <a href="{{url_for('edit_hero', heros_id=test._id)}}">Edit</a>
                         <!--<a href="#">Vote up</a>-->
                     </div>
                 </div>
