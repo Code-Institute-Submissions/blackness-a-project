@@ -17,7 +17,13 @@ mongo = PyMongo(app)
 @app.route('/get_heros')
 def get_heros():
     return render_template("hero.html", heros=mongo.db.local_heros.find())
-    
+
+
+@app.route('/search', methods=['POST'])  
+def search():
+    query = request.form.get('query')
+    famous = mongo.db.Persons_of_Interest.find({'$text':{'$search':query}})
+    return render_template('famous.html', famous=famous, type='searched')
     
 @app.route('/add_hero')
 def add_hero():
