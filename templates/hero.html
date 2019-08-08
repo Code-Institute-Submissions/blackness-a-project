@@ -2,12 +2,10 @@
 <div class="container">
     <h2 id="Citizen">Citizen awards</h2>
     <p>Read through the profiles of the people who are making a change in your area, vote for the most inspirational or </p><span class="special">put forward a nomenee</span>
-    {% for test in heros %}
+    
     <div class="row">
-
-        <div class="col s12 m7">
-
-
+        {% for test in heros %}
+        <div class="col s12 m4">
             <h2 class="header"></h2>
             <div class="card horizontal text_H">
                 <div class="card-image">
@@ -19,18 +17,30 @@
                             <h4>{{ test.Profession }}</h4> {{ test.recognition }} <br/>{{ test.details }}</p>
                     </div>
                     <div class="card-action">
-                        <a href="#">Vote up</a>
+                        <a href="#">Delete</a>
+                        <a href="#">Edit</a>
+                        <!--<a href="#">Vote up</a>-->
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-    </div>{% endfor %}
+        {% endfor %}
+    </div>
 </div>
-
-
+<!--- script taken from Stack overflow to remove place holder when image inputted--->
+<script>
+    jQuery( document ).ready(function() {
+    setTimeout(function () {
+       jQuery('.delay').each(function () {
+          var imagex = jQuery(this);
+          var imgOriginal = imagex.data('src');
+            jQuery(imagex).css('padding',0);
+            jQuery(imagex).attr('src', imgOriginal);
+            jQuery(imagex).removeClass('placeholder'); /*added this*/
+       });
+    }, 1000);
+});
+</script>
 
 
     {% endblock %}
