@@ -24,10 +24,6 @@ def get_famous():
     return render_template("famous.html", famous=mongo.db.Persons_of_Interest.find())
     
 
-@app.route('/get_art')
-def get_art():
-    return render_template("gallery.html", famous=mongo.db.Persons_of_Interest.find())
-
 
 @app.route('/get_index')
 def get_index():
@@ -47,6 +43,11 @@ def insert_hero():
     return redirect(url_for('get_heros'))
 
 
+
+@app.route('/get_art')
+def get_art():
+    return render_template("gallery.html", famous=mongo.db.Persons_of_Interest.find())
+    
 
 
 if __name__ == '__main__':
