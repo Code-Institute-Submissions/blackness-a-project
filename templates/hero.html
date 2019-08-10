@@ -7,13 +7,13 @@
         {% for test in heros %}
         <div class="col s12 m4">
             <h2 class="header"></h2>
-            <div class="card horizontal text_H">
+            <div class="card text_H">
                 <div class="card-image">
                     <img src="{{ test.image }}" class="placeholder">
                 </div>
                 <div class="card-stacked">
                     <div class="card-content">
-                        <p class="nameStrong">{{ test.first }} {{ test.last }} {{ test.gender }} </p>{{ test.nationality }} {{ test.region }}
+                        <p class="nameStrong">{{ test.first }} {{ test.last }}</p>{{ test.nationality }} {{ test.region }}
                             <h4>{{ test.Profession }}</h4> {{ test.recognition }} <br/>{{ test.details }}</p>
                     </div>
                     <div class="card-action">
@@ -39,6 +39,7 @@
             jQuery(imagex).removeClass('placeholder'); /*added this*/
        });
     }, 1000);
+
 });
 </script>
 
