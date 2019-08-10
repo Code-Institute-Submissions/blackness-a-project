@@ -1,27 +1,25 @@
-{% extends 'base.html' %}
-{% block content %}
-<h3>Images</h3>
+{% extends 'base.html' %} {% block content %}
+
 <div class="container">
-
-  <div class="row">
-      {% for test in famous %}
-    <div class="col S12 m4 format">
-      <div class="card">
-        <div class="card-image">
-          <img src="{{ test.images }}">
-          
-          <span class="card-title">{{ test.first }} {{ test.last }}</span>
-        </div>
-        <div class="card-content">
-            <p>{{ test.nationality }} - {{ test.profession }}</p>
-          <p>{{ test.details }}</p>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
+  <h3>Images</h3>
+  <div class="row return">
+    <a href="{{url_for('get_index')}}" class="btn waves-effect waves-light">Return</a>
   </div>
-
+<div class="row"> 
+{% for test in famous %}
+  <div class="card-deck">
+  <div class="card" style="width: 18rem;">
+    
+    <img src="{{ test.images }}" class="card-img-top img-fluid" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ test.first }} {{ test.last }}</h5>
+      <p class="card-title">{{ test.nationality }} - {{ test.profession }}</p>
+      <p class="card-text">{{ test.details }}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  </div>
+{% endfor %}
 </div>
-         
-
+</div>
 {% endblock %}
