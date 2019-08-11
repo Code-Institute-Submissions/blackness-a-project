@@ -1,12 +1,18 @@
 body{
-    background-color: grey;
+    background-color: #b7b3b3;
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color: black;
 }
+
+/* details for corrected css */
+
+
+
+/* END OF CSS for gallery page*/
 
 .hero_add{
     width: 50%;
-    display: block;
+    display: inline-block;
     margin: 0;
     
 }
@@ -22,36 +28,110 @@ body{
     display: block;
     margin: 0;
     padding-left:20px;
-    
 }
 
+
+/*.card-content {*/
+/*    height: 300px;*/
+/*    color:black;*/
+    
+/*}*/
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
+.return{
+    height:100px;
+    display: block;
+}
+
+/*ard-img-top{*/*/
+/*  max-height:300px;*/*/
+/***/
+
 /*.card{*/
-/*    width:50%;*/
-/*    height:300px;*/
+/*    width:100%;*/
+/*    height:600px;*/
 /*    display: inline-block;*/
 /*    margin: 0;*/
     
 /*}*/
 
-.card-content{
-    color:black;
-    text-align: right;
-    flex-direction: none;
-    
-}
+
 
 /*.format{*/
 /*    display: inline-block;*/
-/*    margin: 0;*/
-/*    width: 100px;*/
+/*    margin: auto;*/
+/*    width: 300px;*/
 /*    height: 200px;*/
 /*}*/
 
+
+
+/*.card-image{*/
+/*    max-height:150px;*/
+/*}*/
+
 .containterIndex{
-    background-image: url(static/images/black_collage.png)
+    margin: 0 auto;
+    text-align: center;
     
 }
 
-.carousel{
-    height: 800px;
+.project{
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.searchDB{
+    color:white;
+    text-align: right;
+}
+
+.brand-logo{
+    text-decoration: none;
+}
+/* -------------- CSS FOR index page -------------- */
+.about{
+   
+    border: 1px solid white;
+    width:100px;
+    /*height:300px;*/
+    display: inline-block;
+    padding:10px;
+}
+
+.DB{
+  
+    border: 1px solid white;
+    width:100px;
+    /*height:300px;*/
+    display: inline-block;
+    padding:10px;
+}
+
+.nav .brand-logo{
+    font-size: 2.5em;
+}
+
+.tite{
+    color:black;
+    font-size: 4em;
+    text-align: center;
+}
+
+.ness{
+    color:white;
+}
+
+/* ------------------- css for hero.htl page ---------------- */ 
+.citi{
+    color:#26a69a;
+}
+
+.special{
+    color:#26a69a;
 }

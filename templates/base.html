@@ -15,26 +15,28 @@
 	<header>
 		<nav>
             <div class="nav-wrapper grey darken-1">
-                <a href="{{url_for('get_heros')}}" class="brand-logo center black-text"> - BLACKNESS - </a> 
+                <a href="{{url_for('get_index')}}" class="brand-logo center blackText"> - BLACKNESS - </a> 
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{url_for('get_index')}}">Home</a></li>
-                    <li><a href="{{url_for('get_heros')}}">Local Heros</a></li>
-                    <li><a href="{{url_for('add_hero')}}">Submit Hero</a></li>
-                    <li><a href="{{url_for('get_famous')}}">Search</a></li>
-                    <li><a href="{{url_for('get_art')}}">BUY ART</a></li>
+                    <li><a href="{{url_for('get_index')}}" class="menuTOP">Home</a></li>
+                    <li><a href="{{url_for('get_heros')}}" class="menuTOP">Local Heros</a></li>
+                    <li><a href="{{url_for('add_hero')}}"  class="menuTOP">Submit Hero</a></li>
+                    <!--<li><a href="{{url_for('get_famous')}}">Search</a></li>-->
+                    <li><a href="{{url_for('get_art')}}"  class="menuTOP">BUY ART</a></li>
                    
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="{{url_for('get_index')}}">Home</a></li>
                     <li><a href="{{url_for('get_heros')}}">Local Hero</a></li>
                     <li><a href="{{url_for('add_hero')}}">Submit Hero</a></li>
-                    <li><a href="{{url_for('get_famous')}}">Search</a></li>
+                    <!--<li><a href="{{url_for('get_famous')}}">Search</a></li>-->
                     <li><a href="{{url_for('get_art')}}">BUY ART</a></li>
                 </ul>
             </div>         
      </nav>     
-     <p class="center">- a project about discovering our history -</p>
+     <div class="project">
+     <h4 class="center">- a project about discovering our history -</h4>
+     </div>
 	</header>
      <div class="container">
     {% block content %} {% endblock %}     
@@ -58,6 +60,7 @@
             $(".button-collapse").sideNav();
             $('.carousel').carousel();
         });
+        M.toast({html: 'I am a toast!'});
     </script>
 </body>
 

@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container">
-    <h2 id="Citizen">Citizen awards</h2>
-    <p>Read through the profiles of the people who are making a change in your area, vote for the most inspirational or </p><span class="special">put forward a nomenee</span>
+    <h2 id="Citizen" class="citi">Citizen awards</h2>
+    <p>Read through the profiles of the people who are making a change in your area, vote for the most inspirational or </p><span class="special">put forward a nominee</span>
 
     <div class="row">
         {% for test in heros %}
@@ -18,8 +18,9 @@
                     <li class="list-group-item">OTHER DATA</li>
                 </ul>
                 <div class="card-body"> 
-                    <a href="{{url_for('delete_hero', hero_id=test._id)}}" class="card-link modal-trigger" href="#modal1">Delete</a>
+                    <a href="{{url_for('delete_hero', hero_id=test._id)}}" data-toggle="tooltip" title="Are you sure??">Delete</a>
                     <a href="{{url_for('edit_hero', hero_id=test._id)}}" class="card-link">Edit</a>
+                    <a href="#" data-toggle="tooltip" title="Not available yet!" class="card-link">Vote</a>
                     
                      <!-- Modal Structure -->
                      <div id="modal1" class="modal">

@@ -1,48 +1,30 @@
 {% extends 'base.html' %} {% block content %}
 <div class="containterIndex">
-<h3>search database</h3>
+     <div class="row">
+          <span class="tite Bk">BLACK</span><span class="tite ness">ness</span>
+     </div>
+     <div class="row">
+          <div class="col col-md-6 col-sm-12 about">
+               <h5>Blackness - a project
+               </h5>
+               <p>Is a searchable online database where you can look up famous and also none well known people from the African Disapora worldwide, find out information about who they were, are and what their contributions have been to society. To search
+                    the database enter either a <em>Nationality, Profession</em>or <em>Surname</em></p><br>
+                    Also, if you visit the <em><a href="{{url_for('get_heros')}}">Local Hero</a></em> page you can see who is doing great inspirational work in your neighbourhoods and local regions.
+                    If you would like to, you could also upload a local persons from your area, who you like to give credit to <a href="{{url_for('add_hero')}}">here</a>
+          </div>
+           <div class="col col-md-6 DB">
+               <h5 class="searchDB">Search the Database</h5>
 
 
-<!--<div class="row">-->
-<!--    <form action="{{ url_for('insert_hero') }}" method="POST"  class="col s12">-->
-<!--            <div class="row">-->
-<!--                <div class="input-field col s12">-->
-<!--                    <i class="material-icons prefix">poll</i>-->
-<!--                    <select id="nationality" name="nationality">-->
-<!--                  <option value="" disabled selected>Nationality:</option>-->
-<!--                  {% for nat in nationality %}-->
-<!--                      <option value="{{nat.nationality}}">{{nat.nationality}}</option>-->
-<!--                  {% endfor %}-->
-<!--                </select>-->
-<!--                    <label>Search by:</label>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <div class="input-field col s12">-->
-<!--                    <i class="material-icons prefix">poll</i>-->
-<!--                    <select id="category" name="category_name">-->
-<!--                  <option value="" disabled selected>Profession</option>-->
-<!--                  {% for prof in profession %}-->
-<!--                      <option value="{{prof.profession}}">{{prof.profession}}</option>-->
-<!--                  {% endfor %}-->
-<!--                </select>-->
-<!--                    <label>Search by:</label>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        <div class="row">-->
-<!--            <button class="btn waves-effect waves-light" type="submit" name="action">Search-->
-<!--                <i class="material-icons right">playlist_add</i>-->
-<!--             </button>-->
-<!--        </div>-->
-<!--    </form>-->
-<!--</div>-->
-<!--- Search bar --->
-<div class="row">
-     <form action="{{url_for('search')}}" method="POST">
-         <input type="text" name="query" />
-         <input type="submit" class="btn waves-effect waves-light" value="Submit" />
-     </form>
+               <form action="{{url_for('search')}}" method="POST">
+                    <input type="text" name="query" />
+                    <input type="submit" class="btn waves-effect waves-light" value="Submit" />
+               </form>
+          </div>
+     </div>
+</a>
 </div>
+
 <!--- END OF Search bar --->
 
 
