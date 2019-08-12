@@ -8,33 +8,21 @@
                <h5>Blackness - a project
                </h5>
                <p class="textAbout">Is a searchable online database where you can look up famous and also none well known people from the African Disapora worldwide, find out information about who they were, are and what their contributions have been to society. To search
-                    the database enter either a <em>Nationality, Profession</em>or <em>Surname</em></p><p class="textAbout">
-                    Also, if you visit the <em><a href="{{url_for('get_heros')}}">Local Hero</a></em> page you can see who is doing great inspirational work in your neighbourhoods and local regions.
-                    If you would like to, you could also upload a local persons from your area, who you like to give credit to <a href="{{url_for('add_hero')}}">here</a></p>
+                    the database enter either a <em>Nationality, Profession</em>or <em>Surname</em></p>
+               <p class="textAbout">
+                    Also, if you visit the <em><a href="{{url_for('get_heros')}}">Local Hero</a></em> page you can see who is doing great inspirational work in your neighbourhoods and local regions. If you would like to, you could also upload a local
+                    persons from your area, who you like to give credit to <a href="{{url_for('add_hero')}}">here</a></p>
           </div>
-           <div class="col s6 DB">
+          <div class="col s6 DB">
                <h5 class="searchDB">Search the Database</h5>
-
-
                <form action="{{url_for('search')}}" method="POST">
                     <input type="text" name="query" />
                     <input type="submit" class="btn waves-effect waves-light" value="Submit" />
                </form>
           </div>
      </div>
-</a>
+     </a>
 </div>
-
-<!--- END OF Search bar --->
-
-
-
-
-</div>
-
-
-
-
 
 <!--- END OF CONTAINER INDEX --->
 

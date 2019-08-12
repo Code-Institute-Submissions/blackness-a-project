@@ -1,12 +1,11 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container">
-    <h3>Add your HERO</h3>
+    <h3 class="heroA">Add your HERO</h3>
     <div class="hero_add">
         <h6>Know of someone who should be in our database? Add them here!</h6>
-
         <div class="row">
 <!--- ------------------------------START OF FORM---------------------- ---> 
-            <form action="{{ url_for('insert_hero') }}" method="POST" class="col s12">
+            <form action="{{ url_for('insert_hero') }}" method="POST" class="col s12 ">
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">account_circle</i>
