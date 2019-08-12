@@ -36,7 +36,7 @@ These are some of the error I have found whilst creating the website and after g
 -Pep8 Online    I found I that could not get rid of the last four errors concerning indentation, I believe this has something
                 to do with the length on my string for the name of the database and I did nt want to seperate it onto seperate line. In my files you can see evidence of the error.
 
-###Future implementation
+### Future implementation
 - User loggin or at lession Brower sessions so that only the person who uploaded a file can delete it.
 - Voting system, where user can vote for 'local heroes' added to the DB
 - Improve gallery page with better quality images, links form images to artist page where you could then buy the product, image or print.
@@ -49,7 +49,7 @@ These are some of the error I have found whilst creating the website and after g
 I had have them stored locally.Later I would like to fix both issues.
 
 
-##Frameworks & libraries
+## Frameworks & libraries
 
 > Flask
 > PyMongo
