@@ -1,5 +1,5 @@
 body{
-    background-color: #b7b3b3;
+    background-color: #a5a39d;
     font-family: 'Montserrat', sans-serif;
     color: black;
 }
@@ -51,13 +51,14 @@ body{
 /*  max-height:300px;*/*/
 /***/
 
-/*.card{*/
-/*    width:100%;*/
-/*    height:600px;*/
-/*    display: inline-block;*/
-/*    margin: 0;*/
+.card{
+    width:100%;
+    height:600px;
+    display: inline-block;
     
-/*}*/
+    margin:5px;
+    
+}
 
 
 
@@ -74,7 +75,7 @@ body{
 /*    max-height:150px;*/
 /*}*/
 
-.containterIndex{
+.containter{
     margin: 0 auto;
     text-align: center;
     
@@ -96,21 +97,16 @@ body{
 }
 /* -------------- CSS FOR index page -------------- */
 .about{
-   
-    border: 1px solid white;
-    width:100px;
-    /*height:300px;*/
+    width:40%;
     display: inline-block;
-    padding:10px;
+    /*padding:20px;*/
 }
 
 .DB{
-  
-    border: 1px solid white;
-    width:100px;
-    /*height:300px;*/
+    width:40%;
     display: inline-block;
-    padding:10px;
+    /*padding:10px;*/
+    margin: 0 auto;
 }
 
 .nav .brand-logo{
@@ -127,11 +123,30 @@ body{
     color:white;
 }
 
+.textAbout{
+    text-align:justify;
+}
+
 /* ------------------- css for hero.htl page ---------------- */ 
 .citi{
     color:#26a69a;
+    text-align: center;
 }
 
 .special{
     color:#26a69a;
+    font-weight: bold;
+}
+
+/* --------------------  CSS for famous.html    ---------------------*/
+
+.his{
+    text-align: center;
+}
+
+/* --------CSS for Artist page ----- */
+
+.artists{
+    text-align: center;
+    color:white;
 }

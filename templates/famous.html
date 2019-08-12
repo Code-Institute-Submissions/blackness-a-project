@@ -1,9 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container">
-  <h3>Images</h3>
+  <h3 class="his">History Makers</h3>
   <div class="row return">
-    <a href="{{url_for('get_index')}}" class="btn waves-effect waves-light">Return</a>
+    <a href="{{url_for('get_index')}}" class="btn waves-effect waves-light">Search</a>
   </div>
 <div class="row"> 
 {% for test in famous %}
@@ -15,7 +15,7 @@
       <h5 class="card-title">{{ test.first }} {{ test.last }}</h5>
       <p class="card-title">{{ test.nationality }} - {{ test.profession }}</p>
       <p class="card-text">{{ test.details }}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="#" class="btn btn-small">More Info</a>
     </div>
   </div>
   </div>

@@ -1,18 +1,18 @@
 {% extends 'base.html' %} {% block content %}
-<div class="containterIndex">
+<div class="containter">
      <div class="row">
           <span class="tite Bk">BLACK</span><span class="tite ness">ness</span>
      </div>
      <div class="row">
-          <div class="col col-md-6 col-sm-12 about">
+          <div class="col s6 about">
                <h5>Blackness - a project
                </h5>
-               <p>Is a searchable online database where you can look up famous and also none well known people from the African Disapora worldwide, find out information about who they were, are and what their contributions have been to society. To search
-                    the database enter either a <em>Nationality, Profession</em>or <em>Surname</em></p><br>
+               <p class="textAbout">Is a searchable online database where you can look up famous and also none well known people from the African Disapora worldwide, find out information about who they were, are and what their contributions have been to society. To search
+                    the database enter either a <em>Nationality, Profession</em>or <em>Surname</em></p><p class="textAbout">
                     Also, if you visit the <em><a href="{{url_for('get_heros')}}">Local Hero</a></em> page you can see who is doing great inspirational work in your neighbourhoods and local regions.
-                    If you would like to, you could also upload a local persons from your area, who you like to give credit to <a href="{{url_for('add_hero')}}">here</a>
+                    If you would like to, you could also upload a local persons from your area, who you like to give credit to <a href="{{url_for('add_hero')}}">here</a></p>
           </div>
-           <div class="col col-md-6 DB">
+           <div class="col s6 DB">
                <h5 class="searchDB">Search the Database</h5>
 
 
